@@ -13,8 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 3. Construir y ejecutar el comando
     $command = "./euclides $a_safe $b_safe $n_safe";
-    //$output = shell_exec($command);
-    exec($command, $output, $return_code);
+    $output = shell_exec($command);
     
     // Si la salida es nula o vacía, hubo un problema con la ejecución
     if (empty(trim($output))) {
