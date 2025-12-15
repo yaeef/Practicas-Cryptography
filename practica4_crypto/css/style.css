@@ -1,0 +1,348 @@
+/*global*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;     /*Imagen responsiva*/
+}
+h1{
+    font-size: 4rem;
+    color: #ffffff;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+/*utilidades*/
+.mayus{
+    text-transform: uppercase;
+}
+.minus{
+    text-transform: lowercase;
+}
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+}
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+.l-h{
+    line-height: 2;
+}
+/*scrollbar*/
+body::-webkit-scrollbar{
+    width: 1rem;
+}
+body::-webkit-scrollbar-track{
+    background: rgba(199, 206, 199, 0.726);
+    border-radius: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba(141, 146, 141, 0.926);
+    border-radius: 8px;
+}
+body::-webkit-scrollbar-thumb:active {
+    background: rgba(64, 66, 64, 0.926);
+}
+/*header*/
+.site-header{
+    background-image: url(../img/notebook-1280538.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+.site-header-g{
+    background-color: #2f2f2f
+}
+.flex-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header p{
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lista-menu{
+    list-style: none;
+    display: flex;
+}
+.lista-menu li a{
+    margin-right: 2rem;
+    font-size: 2.1rem;
+    color: #ffffff;
+}
+.lista-menu :hover{
+    color: rgb(33, 189, 163);
+    transition: all .4s;
+}
+/*Seccion quien soy*/
+.contenedor-quien-soy{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.texto-quien-soy{
+    max-width: 42%;
+}
+.texto-quien-soy p{
+    font-size: 1.7rem;
+    margin: 0;
+    color: rgba(19, 18, 18, 0.904);
+}
+.texto-quien-soy :last-of-type{
+    margin-top: 1.6rem;
+}
+/*Estudios*/
+.owl-nav span{
+    font-size: 4rem;
+    color: rgb(51, 170, 190);
+}
+/*.owl-theme .owl-dots .owl-dot span{
+    display: none;
+}*/
+/*Contacto*/
+.banner-contacto{
+    height: 35vh;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.contenedor-contacto{
+    padding-top: 2rem ;
+}
+.contenedor-contacto h2{
+    color: #ffffff;
+}.contenedor-contacto p{
+    color: #ffffff;
+}
+.contenedor-contacto a{
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    color: #ffffff;
+    background-color:rgba(35, 201, 201, 0.536);
+}
+/*footer*/
+
+footer{
+    background-color: #2f2f2f;
+    padding: 2rem 0;
+    margin-top: 1px;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor-redes img{
+    margin: 0 3rem;
+    transform: rotate(0);
+    transition: .4s;
+}
+.contenedor-redes img:hover{
+    transform: rotate(360deg);
+    transition: .4s;
+}
+.footer-texto{
+    color: #ffffff;
+}
+footer img{
+    max-width: 24px;
+}
+/*boton wa*/
+#btn-whatsapp{
+    position: fixed;
+    top: 80%;
+    right: 1%;
+    z-index: 100;
+    width: 7.1rem;
+}
+/*Formulario*/
+.form-banner{
+    background-image: url(../img/home-office-336373.jpg);
+    background-size: cover;
+    height: 35vh;
+    background-position: center center;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 3rem auto;
+    
+}
+input[type="text"] , input[type="email"]{
+    width: 48%;
+    border: none;
+    margin-bottom: 1.5rem;
+    padding: 1.8rem 0;
+    border: 1px solid rgb(33, 189, 163);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.22) 2px 4px 10px;
+    font-size: 1.7rem;
+}
+textarea{
+    padding: 1.8rem 0;
+    border: none;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgb(33, 189, 163);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.22) 2px 4px 10px;
+    font-size: 1.7rem;
+    width: 100%;
+    resize: none;
+}
+input[type="submit"]{
+    padding: 1.5rem 3rem;
+    color: #ffffff;
+    background-color:rgb(33, 189, 163);
+    margin: 0 auto;
+    border: 0; 
+    border-radius: 5%;
+}
+/*hidden things desktop*/
+.menu-resp{
+    display: none;
+    max-width: 8rem;
+}
+.footer-texto-responsive{
+    display: none;
+}
+.envio{
+    color: rgb(33, 189, 163);
+    margin: 15rem auto;
+}
+/*Responsive design*/
+@media (max-width: 768px) {
+    /*scrollbar*/
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    /*header*/
+    .site-header{
+        background-image: url(../img/website-design-background.png);
+        background-position: left bottom;
+    }
+    .menu-resp{
+        display: block;
+        float: right;
+    }
+    .nav{
+        position: absolute;
+        top: 8.3rem;
+        height: 26.8rem;
+        background-color: #2f2f2f;
+        width: 95%;
+        display: none;
+    }
+    .contenedor {
+        width: 95%;
+    }
+    .lista-menu{
+        flex-direction: column;
+    }
+    .lista-menu li{
+        margin-bottom: 4rem;
+    }
+    /*quien soy*/
+    .contenedor-quien-soy{
+        flex-direction: column;
+    }
+    .img-quien-soy{
+        width: 100%;
+    }
+    .texto-quien-soy{
+        max-width: 100%;
+        text-align: justify;
+    }
+    /*contacto*/
+    .banner-contacto{
+        height: 45vh;
+    }
+    .contenedor-contacto h2{
+        color: #ffffff;
+    }
+    .contenedor-contacto p{
+        color: #ffffff;
+        font-size: 1.7rem;
+	margin-bottom: 2rem;
+    }
+    .contenedor-contacto a{
+        display: block;
+        text-align: center;
+        padding: 1.5rem 2.5rem;
+        font-size: 2.4rem;
+        color: #ffffff;
+        background-color:rgba(35, 201, 201, 0.836); 
+    }
+    /*footer r*/
+    footer{
+    background-color: #2f2f2f;
+    padding: 2rem 0;
+    margin-top: 1px;
+    }
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .contenedor-redes img{
+        transform: rotate(0);
+        transition: .4s;
+        display: flex;
+        flex-direction: column;
+        margin: 0.6rem 0;
+    }
+    .contenedor-redes img:hover{
+        transform: rotate(360deg);
+        transition: .4s;
+    }
+    .footer-texto{
+        display: none;
+    }
+    .footer-texto-responsive{
+        display: block;
+        color: #ffffff;
+        max-width: 50%;
+    }
+    footer img{
+        max-width: 24px;
+    }
+    /*btn wa responsive*/
+    #btn-whatsapp{
+        position: fixed;
+        top: 84%;
+        right: 1%;
+        z-index: 100;
+    }
+    /*form*/
+    input[type="text"] , input[type="email"]{
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+}

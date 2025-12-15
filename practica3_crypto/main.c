@@ -12,7 +12,7 @@ int main(int argc, char **argv)
   checkCLI(argc, opt);
   int type = atoi(*(argv+3));
   unsigned char *key = *(argv+4);
-  unsigned char *iv = *(argv+5);
+  unsigned char *iv = *(arv+5);
 
   BITMAPFILEHEADER headerFile;
   BITMAPINFOHEADERV3X headerInfo;

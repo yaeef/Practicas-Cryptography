@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema RSA OAEP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        h1, h2 { color: #333; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
+        .operation { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #fff; }
+        button, input[type="submit"] {
+            padding: 10px 15px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover, input[type="submit"]:hover { background-color: #0056b3; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="file"] { margin-top: 5px; }
+        .result { margin-top: 20px; padding: 15px; background-color: #e9ecef; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Pŕactica RSA</h1>
+
+    <div class="operation">
+        <h2>Generar Llaves RSA</h2>
+        <p>Esto creará <code>public_key.pem</code> y <code>private_key.pem</code>.</p>
+        <form action="process.php" method="POST">
+            <input type="hidden" name="action" value="keygen">
+            <button type="submit">GENERAR</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="operation">
+        <h2>Cifrar Archivo</h2>
+        <p>Se requiere el archivo a cifrar (.txt) y la Llave Pública (.pem).</p>
+        <form action="process.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="encrypt">
+
+            <label for="encrypt_input">Archivo de Entrada (.txt):</label>
+            <input type="file" id="encrypt_input" name="input_file" required>
+
+            <label for="encrypt_key">Llave Pública del receptor(.pem):</label>
+            <input type="file" id="encrypt_key" name="key_file" accept=".pem" required>
+
+            <br><br>
+            <input type="submit" value="CIFRAR">
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="operation">
+        <h2>Descifrar Archivo</h2>
+        <p>Se requiere el archivo cifrado (.enc) y la Llave Privada (.pem).</p>
+        <form action="process.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="decrypt">
+
+            <label for="decrypt_input">Archivo Cifrado (.enc):</label>
+            <input type="file" id="decrypt_input" name="input_file" accept=".enc" required>
+
+            <label for="decrypt_key">Llave Privada del receptor(.pem):</label>
+            <input type="file" id="decrypt_key" name="key_file" accept=".pem" required>
+
+            <br><br>
+            <input type="submit" value="DECIFRAR">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
